@@ -13,6 +13,13 @@
 body,
 html {
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
 }
 
 /* Navigation Bar */
@@ -20,10 +27,12 @@ html {
 nav ul {
   display: flex;
   flex-flow: row nowrap;
+  border: black 1px solid;
 }
 
 nav li {
   padding: 20px 10px;
+  font-size: 14px;
 }
 
 nav a {
@@ -56,6 +65,76 @@ nav a:hover {
   display: none;
 }
 
+/* Main Content */
+.featured {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  column-gap: 10px;
+  margin: 10px 10px;
+}
+
+.featured > div {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  height: 540px;
+}
+
+.large-article {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background-color: rgb(44, 44, 44);
+  background-image: linear-gradient(#d4d4d4, black);
+}
+
+.article-title p {
+  font-size: 12px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.article-details {
+  display: flex;
+  padding: 1.3em 0 0 0;
+  align-items: center;
+}
+
+.article-details a {
+  color: #a8a8a8;
+}
+
+.article-details p {
+  padding-right: 10px;
+  font-size: 14px;
+  color: #a8a8a8;
+}
+
+.article-details i {
+  padding-right: 3px;
+  color: #a8a8a8;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+#today a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+}
+
 /* Responsive Queries */
 
 @media only screen and (max-width: 1214px) {
@@ -70,10 +149,32 @@ nav a:hover {
 
 /* Content Breakpoint */
 @media only screen and (max-width: 1024px) {
+  .large-article {
+    padding: 20px 10px;
+  }
+
+  #today {
+    visibility: hidden;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .article-details {
+    padding-top: 10px;
+  }
 }
 
-/* Mobile */
+/* Mobile (Content and Nav) */
 @media only screen and (max-width: 768px) {
+  /* Nav */
   nav li {
     display: none;
   }
@@ -88,5 +189,27 @@ nav a:hover {
 
   #hamburger-menu {
     display: initial;
+  }
+
+  /* Content */
+  .featured {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
+  }
+
+  .featured > div {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .large-article {
+    height: 200px;
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 20px;
   }
 }
