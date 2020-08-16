@@ -27,7 +27,6 @@ a:visited {
 nav ul {
   display: flex;
   flex-flow: row nowrap;
-  border: black 1px solid;
 }
 
 nav li {
@@ -113,6 +112,7 @@ nav a:hover {
 
 .article-details i {
   padding-right: 3px;
+  height: 100%;
   color: #a8a8a8;
 }
 
@@ -135,11 +135,96 @@ h3 {
   color: white;
 }
 
-/* Responsive Queries */
+/* More Articles */
+.wrapper {
+  background-color: rgb(226, 226, 226);
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.articles {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.articles > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-right: -37px;
+}
+
+.articles h4,
+.articles h4 a {
+  font-size: 28px;
+  margin: 20px 0;
+  color: #f42;
+  font-weight: bold;
+}
+
+.articles h4 a:hover {
+  color: black;
+}
+
+.article {
+  width: 23%;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.article h5 {
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 7px 0;
+  line-height: 18px;
+}
+
+.author {
+  display: flex;
+  font-size: 14px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.author,
+.author a {
+  color: #949494;
+}
+
+.author a:hover {
+  color: #555555;
+}
+
+.author span {
+  padding: 0 8px;
+}
+
+.thumbnail {
+  overflow: hidden;
+  width: 100%;
+}
+
+.thumbnail div {
+  height: 142px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  overflow: hidden;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+}
+
+/* Responsive Media Queries */
 
 @media only screen and (max-width: 1214px) {
   .nav-mid {
     display: none;
+  }
+
+  .thumbnail div {
+    height: 11.5vw;
   }
 }
 
@@ -169,6 +254,26 @@ h3 {
 
   .article-details {
     padding-top: 10px;
+  }
+
+  /* More Articles */
+  #explore {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .articles {
+  }
+
+  .articles > div {
+  }
+
+  .article {
+    width: 30.8%;
+  }
+
+  .thumbnail div {
+    height: 16vw;
   }
 }
 
@@ -211,5 +316,33 @@ h3 {
   h2 {
     font-size: 18px;
     line-height: 20px;
+  }
+
+  /* More Articles */
+  .articles {
+  }
+
+  .article {
+    width: 100% !important;
+  }
+
+  .thumbnail {
+    width: 70px;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .thumbnail div {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .thumbnail img {
+    height: 100%;
+    width: unset;
   }
 }
