@@ -144,6 +144,7 @@ h3 {
 .articles {
   display: flex;
   flex-flow: column wrap;
+  overflow: hidden;
 }
 
 .articles > div {
@@ -209,7 +210,8 @@ h3 {
 }
 
 .thumbnail img {
-  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
   overflow: hidden;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
@@ -224,6 +226,11 @@ h3 {
 
   .thumbnail div {
     height: 11.5vw;
+  }
+
+  #explore {
+    padding: 20px;
+    overflow: hidden;
   }
 }
 
@@ -256,11 +263,6 @@ h3 {
   }
 
   /* More Articles */
-  #explore {
-    padding: 20px;
-    overflow: hidden;
-  }
-
   .articles {
   }
 
@@ -268,7 +270,17 @@ h3 {
   }
 
   .article {
-    width: 30.8%;
+    width: 30.7%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .article h5 {
+    font-size: 14px;
+  }
+
+  .author p {
+    font-size: 12px;
   }
 
   .thumbnail div {
