@@ -88,7 +88,7 @@ nav a:hover {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px 15px;
   background-color: rgb(44, 44, 44);
   background-image: linear-gradient(#d4d4d4, black);
 }
@@ -123,6 +123,7 @@ nav a:hover {
 
 h2 {
   font-size: 48px;
+  line-height: 52px;
   font-weight: bold;
   color: white;
 }
@@ -143,13 +144,15 @@ h3 {
 /* More Articles */
 .wrapper {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1170px;
+  overflow: hidden;
 }
 
 .articles {
   display: flex;
   flex-flow: column wrap;
   overflow: hidden;
+  width: 100%;
 }
 
 .articles > div {
@@ -174,14 +177,20 @@ h3 {
 .article {
   width: 23%;
   margin-bottom: 20px;
-  padding-right: 20px;
+  padding-right: 19px;
 }
 
 .article h5 {
   font-size: 16px;
   font-weight: bolder;
-  padding: 7px auto;
+  padding: 10px 0;
+  padding-bottom: 7px;
   line-height: 18px;
+}
+
+.article h5:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .inline-links {
@@ -243,14 +252,9 @@ h3 {
   min-height: 100%;
   max-width: 100%;
   overflow: hidden;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.3s;
 }
 
 /* Funding Categories */
-.funding-category {
-}
-
 .funding-category > .container {
   box-sizing: border-box;
   width: 100%;
@@ -348,7 +352,6 @@ h3 {
   display: inline-flex;
   flex-flow: row wrap;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .category {
@@ -413,6 +416,7 @@ h3 {
 
 /* Categories: More articles */
 .category-articles {
+  width: 100%;
   font-size: 14px;
   line-height: 20px;
 }
@@ -444,6 +448,49 @@ h3 {
   margin-left: -1em;
 }
 
+/* Latest deals Section */
+.sale-price {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.sale-price small {
+  font-size: 12px;
+  padding: 0 5px 0 0;
+  text-decoration: line-through;
+  color: #949494;
+}
+
+.sale-price p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.deal-thumbnail div {
+  height: 14.5vw !important;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.deal-thumbnail span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0 0 40px 10px;
+}
+
+.deal-thumbnail p {
+  font-size: 14px;
+  font-weight: bold;
+  transform: rotate(45deg);
+  margin: 20px 2px 0 0;
+}
+
 /* Responsive Media Queries */
 
 @media only screen and (max-width: 1214px) {
@@ -453,6 +500,11 @@ h3 {
 
   .thumbnail div {
     height: 11.5vw;
+  }
+
+  .articles > div {
+    margin-right: -30px;
+    width: 100%;
   }
 
   #explore {
@@ -506,8 +558,16 @@ h3 {
     font-size: 12px;
   }
 
+  .sale-price p {
+    font-size: 14px;
+  }
+
   .thumbnail div {
     height: 16vw;
+  }
+
+  .deal-thumbnail div {
+    height: 23vw !important;
   }
 
   /* Categories Section */
@@ -583,8 +643,8 @@ h3 {
   }
 
   .thumbnail div {
-    height: 70px;
-    width: 70px;
+    height: 70px !important;
+    width: 70px !important;
     overflow: hidden;
     position: relative;
   }
@@ -592,6 +652,10 @@ h3 {
   .thumbnail img {
     height: 100%;
     width: unset;
+  }
+
+  .deal-thumbnail span {
+    display: none;
   }
 
   /* Categories Section */
