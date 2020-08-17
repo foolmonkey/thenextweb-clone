@@ -210,6 +210,10 @@ h3 {
   color: var(--primary-color);
 }
 
+.inline-links > ul li a:hover {
+  color: black;
+}
+
 .inline-links > ul li:not(:last-child):after {
   content: " | ";
 }
@@ -326,6 +330,14 @@ h3 {
   padding-bottom: 10px;
   padding-top: 5px;
   font-size: 14px;
+}
+
+.charity-tags a {
+  color: rgb(61, 61, 61);
+}
+
+.charity-tags li a:hover {
+  color: black;
 }
 
 .charity-tags i {
