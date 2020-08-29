@@ -73,6 +73,10 @@ nav a:hover {
   width: 100%;
 }
 
+.logo-big {
+  width: 55%;
+}
+
 #nav-right {
   flex-grow: 1;
   display: flex;
@@ -116,7 +120,28 @@ nav a:hover {
   justify-content: space-between;
   padding: 20px 15px;
   background-color: rgb(44, 44, 44);
-  background-image: linear-gradient(#d4d4d4, black);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#d4d4d400, black),
+    url("images/cover_photo.jpg");
+  position: relative;
+}
+
+#headliner {
+  background-image: linear-gradient(
+      170deg,
+      rgb(255, 42, 0),
+      rgba(255, 42, 0, 0.685),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(#ffffff00, rgb(0, 0, 0)), url("images/cover_photo.jpg");
+}
+
+.flagship {
+  background-image: linear-gradient(#d4d4d400, black),
+    url("images/flagship.jpg");
 }
 
 .article-title p {
@@ -557,6 +582,10 @@ footer {
   background-color: rgb(53, 53, 53);
 }
 
+#footer-social li i {
+  width: 16px;
+}
+
 #footer-social li a:hover {
   background-color: unset;
 }
@@ -717,6 +746,10 @@ footer {
     line-height: 20px;
   }
 
+  h5 {
+    padding-top: 0 !important;
+  }
+
   /* More Articles */
   .article {
     width: 100% !important;
@@ -777,5 +810,9 @@ footer {
 
   #footer-copyright span {
     padding: 4px;
+  }
+
+  #footer-social li a {
+    margin: 5px;
   }
 }
