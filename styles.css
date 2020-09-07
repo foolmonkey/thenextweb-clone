@@ -637,10 +637,6 @@ footer {
   background-color: rgb(53, 53, 53);
 }
 
-#footer-social li i {
-  width: 16px;
-}
-
 #footer-social li a:hover {
   background-color: unset;
 }
@@ -778,6 +774,12 @@ footer {
     display: initial;
   }
 
+  /* Secondary Nav */
+  #secondary-nav {
+    display: none;
+    visibility: hidden;
+  }
+
   /* Content */
   .featured {
     display: flex;
@@ -788,6 +790,11 @@ footer {
   .featured > div {
     display: flex;
     flex-flow: column wrap;
+    height: unset;
+  }
+
+  .featured section {
+    width: unset !important;
   }
 
   .large-article {
